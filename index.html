@@ -3,17 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - Diego Armando</title>
+    <title>Mi Portafolio - Diego Armando</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f4f9; color: #333; }
-        h1 { color: #2c3e50; }
-        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 800px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            padding: 40px;
+        }
+
+        header {
+            margin-bottom: 30px;
+        }
+
+        .title {
+            font-size: 28px;
+            font-weight: 800;
+            color: #0f172a;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #64748b;
+            margin-top: 4px;
+        }
+
+        nav {
+            display: flex;
+            gap: 24px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 12px;
+            margin-bottom: 36px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #475569;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover, nav a.active {
+            color: #2563eb;
+            font-weight: 600;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 20px;
+            object-fit: cover;
+            background-color: #e0f2fe;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+        }
+
+        .bio {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .greeting {
+            font-size: 20px;
+            color: #334155;
+            font-weight: 500;
+        }
+
+        .name {
+            font-size: 32px;
+            font-weight: 800;
+            color: #1e293b;
+            margin: 4px 0;
+        }
+
+        .role {
+            font-size: 18px;
+            color: #475569;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .description {
+            font-size: 15px;
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        .btn-primary {
+            background-color: #2563eb;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+        }
+
+        .btn-secondary {
+            background-color: #f1f5f9;
+            color: #334155;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .skills {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .skill-badge {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #334155;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>Mi Portafolio Web</h1>
-        <p>¡Bienvenido! Esta es la Práctica 1 desplegada exitosamente mediante Git, GitHub y Dokploy.</p>
+    <div class="container">
+        <header>
+            <div class="title">Mi Portafolio</div>
+            <div class="subtitle">Desarrollador de Software</div>
+        </header>
+
+        <nav>
+            <a href="#" class="active">Inicio</a>
+            <a href="#">Sobre mí</a>
+            <a href="#">Proyectos</a>
+            <a href="#">Contacto</a>
+        </nav>
+
+        <div class="hero">
+            <img src="perfil.jpg" alt="Foto de perfil" class="profile-img" onerror="this.src='https://via.placeholder.com/160/e0f2fe/2563eb?text=Perfil'">
+            
+            <div class="bio">
+                <div class="greeting">Hola, soy</div>
+                <div class="name">Diego Armando</div>
+                <div class="role">Desarrollador de Software</div>
+                <p class="description">
+                    Creo soluciones web modernas y escalables utilizando tecnologías como Python, Docker, Linux y más.
+                </p>
+
+                <div class="actions">
+                    <a href="#proyectos" class="btn-primary">Ver proyectos</a>
+                    <a href="#contacto" class="btn-secondary">Contactar</a>
+                </div>
+
+                <div class="skills">
+                    <div class="skill-badge">🐍 Python</div>
+                    <div class="skill-badge">🐳 Docker</div>
+                    <div class="skill-badge">🐧 Linux</div>
+                    <div class="skill-badge">⚡ Git & GitHub</div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
